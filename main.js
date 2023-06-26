@@ -1,9 +1,9 @@
 let acor =Array.from(document.querySelectorAll(".acor"));
 
-acor.forEach((but)=> {
-    but.addEventListener("click" , ()=>{
-        but.classList.toggle("active")
-        let texto = but.nextElementSibling;
+acor.forEach((btn)=> {
+    btn.addEventListener("click" , ()=>{
+        btn.classList.toggle("active")
+        let texto = btn.nextElementSibling;
         if (texto.style.display === "block"){
             texto.style.display = "none";
         }else{
@@ -24,26 +24,35 @@ text.forEach((text) =>{
     })
 });
 
-const face = document.getElementById("face")
+const face = Array.from(document.getElementsByClassName("face"));
 
-face.addEventListener("click" , ()=>{
-    window.open("https://www.facebook.com/abarradas2", "_black")
-})
+face.forEach((btn)=>{
+    btn.addEventListener("click", ()=>{
+        window.open("https://www.facebook.com/abarradas2", "_black")
+    });
+});
 
-const wapp = document.getElementById("wapp")
+const wapp = Array.from(document.getElementsByClassName("wapp"));
 
-wapp.addEventListener("click" , ()=>{
-    window.open("https://wa.me/message/MW645D6G32B2D1", "_black")
-})
+wapp.forEach((btn)=>{
+    btn.addEventListener("click" , ()=>{
+        window.open("https://wa.me/message/MW645D6G32B2D1", "_black")
+    });    
+});
 
-const tele = document.getElementById("tele")
+const tele = Array.from(document.getElementsByClassName("tele"));
 
-tele.addEventListener("click" , ()=>{
-    window.open("https://t.me/Ana_Barradas_Solicitadora", "_black")
-})
+tele.forEach((btn)=>{
+    btn.addEventListener("click" , ()=>{
+        window.open("https://t.me/Ana_Barradas_Solicitadora", "_black")
+    });
+});
 
-const insta = document.getElementById("insta")
+const insta = Array.from(document.getElementsByClassName("insta"));
 
-insta.addEventListener("click" , ()=>{
-    window.open("https://instagram.com/anabarradas_solicitadora?igshid=MjEwN2IyYWYwYw==", "_black")
-})
+insta.forEach((btn)=>{
+    btn.addEventListener("click" , ()=>{
+        window.open("https://instagram.com/anabarradas_solicitadora?igshid=MjEwN2IyYWYwYw==", "_black")
+    });
+});
+
