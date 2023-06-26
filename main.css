@@ -321,7 +321,7 @@ body{
         visibility:visible;
         position: relative;
         width: 95%;
-        height: 22%;
+        height: 30%;
         display: block;
         margin: 0 auto;
         background-color: var(--bkgColor);
@@ -332,6 +332,7 @@ body{
         position: absolute;
         margin: 2%;
         font-family:Arial, Helvetica, sans-serif;
+        text-decoration: none;
     }
     .smallImg{
         position: absolute;
