@@ -1,0 +1,560 @@
+html{
+    width: auto;
+    height: auto;
+    position: relative;
+}
+body{
+    position: relative;
+    overflow: auto;
+    margin: 0;
+    background-color: #011d36;
+    height: auto;
+}
+:root{
+    --dourado:#d49873;
+    --azul:#011d36;
+    --bkgColor:#dddbcf;
+}
+.helv{
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media (min-width: 1211px) and (min-height:816px){
+
+    .borda{
+        position: fixed;
+        width: 98%;
+        height: 98%;
+        border: #d49873 solid 1.5px;
+        border-radius: 10px;
+        z-index: 99999999;
+        margin: 1%;
+        pointer-events: none;
+    }
+    .fundo{
+        z-index: -99;
+        position: fixed;
+        background-size: auto;
+    }
+    .helv{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .leftTxt{
+        display: block;
+        position: relative;
+        margin-left: 5%;
+        margin-bottom: 0;
+        color: #011d36;
+    }
+    .navCnt{
+        width: 100%;
+        height: 15%;
+        position: fixed;
+        display: block;
+        z-index: 99;
+    }
+    .logo{
+        position: relative;
+        height: 80%;
+        display: block;
+        margin: 0 auto;
+        top: 15%;
+    }
+    .leftCnt{
+        background-color: var(--bkgColor);
+        height: 79.5%;
+        width: 30%;
+        position: fixed;
+        border-radius: 10px;
+        bottom: 3%;
+        left: 1.8%;
+        display: inline;
+    }
+    .linhaHorz{
+        position: relative;
+        width: 95%;
+        height: 1px;
+        background-color: #d49873;
+        left: 2.5%;
+        top: 1%;
+        margin-bottom: 5%;
+    }
+    .linhaVert{
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background-color: #d49873;
+        z-index: -1;
+        left: 0;
+    }
+    .h4{
+        margin-top: 0;
+        font-weight: normal;
+    }
+    .span{
+        margin-top: 5%;
+        margin-right: 5%;
+    }
+    .img{
+        z-index: -1;
+        position: absolute;
+        height: 40%;
+        width: fit-content;
+        bottom: 0;
+        border-radius: 20px;
+        left: 10vw;
+    }
+    .Cnt{
+        height: 80%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        top: 17.5%;
+        margin-right: 2%;
+        right: 0;
+        width: 65%;
+    }
+    .scrollCnt{
+        height: 80%;
+        position: fixed;
+        width: 65%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .miniCnt{
+        position: relative;
+        margin-bottom: 5%;
+        padding-top: 5%;
+        padding-bottom: 1%;
+        width: 99%;
+        height: fit-content;
+        border-radius: 10px;
+        border: var(--dourado) 1px solid;
+        backdrop-filter:blur(5px);
+    }
+    .miniCnt::before{
+        content: "";
+        position: absolute;
+        height: 85%;
+        width: 100%;
+        border-radius: 10px;
+        bottom: 0;
+        border-top: var(--dourado) 1px solid;
+    }
+    .crt{
+        position: relative;
+        color: var(--bkgColor);
+        margin-left: 3%;
+    }
+    .ideais{
+        position: absolute;
+        left: 5%;
+        top: 3%;
+        margin: auto;
+        color: var(--bkgColor);
+    }
+    .acorCnt{
+        position: relative;
+        width: 99%;
+        overflow: visible;
+        cursor: pointer;
+    }
+    .acor{
+        color: var(--bkgColor);
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        border-radius: 10px;
+        border: var(--dourado) 1px solid;
+        backdrop-filter:blur(5px);
+        background-color: transparent;
+        padding-left: 5%;
+        pointer-events: all;
+        margin-bottom: 5%;
+    }
+    .active{
+        backdrop-filter:blur(20px);
+        border-bottom: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-bottom: 0;
+    }
+    .texto {
+        padding: 0 18px;
+        display: none;
+        border-radius: 10px;
+        border: var(--dourado) 1px solid;
+        backdrop-filter:blur(20px);
+        border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        overflow: auto;
+        color: var(--bkgColor);
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 5%;
+        height: fit-content;
+        margin-bottom: 5%;
+    }
+    .acora{
+        color: var(--bkgColor);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 18px;
+        width: 92.5%;
+        border: none;
+        text-align: left;
+        outline: none;
+        border-radius: 10px;
+        border-top: var(--dourado) 1px solid;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background-color: transparent;
+        padding-left: 5%;
+        pointer-events: none;
+    }
+    .serviços{
+        color: var(--bkgColor);
+        margin-bottom: 4%;
+        position: relative;
+    }
+    .scrollCnt::-webkit-scrollbar {
+        width: 0.3vw;
+    }
+    .scrollCnt::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    .scrollCnt::-webkit-scrollbar-thumb {
+        background-color: var(--dourado);
+    }
+    .scrollCnt::-webkit-scrollbar-thumb:hover {
+        background-color: var(--dourado)
+    }
+    .btnCnt{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin-bottom: 1%;
+    }
+    .btn{
+        margin-bottom: 2%;
+        width: 60%;
+        align-self: center;
+        border: solid var(--dourado) 1px;
+        border-radius: 5px;
+        background-color: var(--bkgColor);
+        color: var(--azul);
+        font-family: Arial, Helvetica, sans-serif;
+        height: 3em;
+        box-shadow: inset 0 -2px   rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.3s;
+        z-index: 20;
+    }
+    .btn:hover{
+        box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+    .logoSoli{
+        width: 40%;
+        position: absolute;
+        bottom: 0;
+        visibility: visible;
+    }
+    .info{
+        width: fit-content;
+        background-color: transparent;
+        backdrop-filter:blur(10px);
+        border-radius: 10px;
+        margin-left: 5%;
+    }
+    .infoTxt{
+        color: var(--azul);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /*//////////////////////////////////////// visibility: collapse; /////////////////////////////////////////////////*/
+
+    .smallMidCnt{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+    .smallImgPos{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+    .smallBtnCnt{
+        visibility: collapse;
+    }
+    .smallLogoSoli{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+}
+@media (max-width: 1210px), (max-height: 815px){
+    .fundo{
+        z-index: -99;
+        position: fixed;
+        background-size: auto;
+    }
+    .navCnt{
+        width: 100%;
+        height: 15%;
+        position: relative;
+        display: block;
+        z-index: 99;
+    }
+    .logo{
+        position: relative;
+        height: 80%;
+        display: block;
+        margin: 0 auto;
+        top: 15%;
+    }
+    .smallMidCnt{
+        visibility:visible;
+        position: relative;
+        width: 95%;
+        height: 22%;
+        display: block;
+        margin: 0 auto;
+        background-color: var(--bkgColor);
+        color: var(--azul);
+        border-radius: 10px;
+    }
+    .smallInfo{
+        position: absolute;
+        margin: 2%;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .smallImg{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 160px;
+        height: auto;
+        object-fit: contain;
+    }
+    .smallBtnCnt{
+        visibility: visible;
+        margin-top: 2%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin-bottom: 1%;
+    }
+    .btn{
+        margin-bottom: 2%;
+        width: 90%;
+        align-self: center;
+        border: solid var(--dourado) 1px;
+        border-radius: 5px;
+        background-color: var(--bkgColor);
+        color: var(--azul);
+        font-family: Arial, Helvetica, sans-serif;
+        height: 3em;
+        box-shadow: inset 0 -2px   rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.3s;
+        z-index: 20;
+    }
+    .btn:hover{
+        box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+    @media (max-width: 591px){
+        .smallImg{
+            visibility: collapse;
+        }
+    }
+    .Cnt{
+        height: auto;
+        width: 95%;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        top: 2%;
+    }
+    .scrollCnt{
+        height: auto;
+        width: 95%;
+        overflow-y: none;
+        overflow-x: none;
+        position: relative;
+    }
+    .miniCnt{
+        position: relative;
+        margin-bottom: 5%;
+        padding-top: 5%;
+        padding-bottom: 1%;
+        width: 99%;
+        height: fit-content;
+        border: none;
+        border-radius: 10px;
+        backdrop-filter:blur(5px);
+    }
+    .miniCnt::before{
+        visibility: collapse;
+    }
+    .ideais{
+        position: relative;
+        margin: 2%;
+        color: var(--bkgColor);
+    }
+    .crt{
+        color: var(--bkgColor);
+        margin-left: 3%;
+    }
+    .acorCnt{
+        position: relative;
+        width: 99%;
+        overflow: visible;
+        cursor: pointer;
+    }
+    .acor{
+        color: var(--bkgColor);
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        border-radius: 10px;
+        border: var(--dourado) 1px solid;
+        backdrop-filter:blur(5px);
+        background-color: transparent;
+        padding-left: 5%;
+        pointer-events: all;
+        margin-bottom: 5%;
+    }
+    .active{
+        backdrop-filter:blur(20px);
+        border-bottom: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-bottom: 0;
+    }
+    .texto {
+        padding: 0 18px;
+        display: none;
+        border-radius: 10px;
+        border: var(--dourado) 1px solid;
+        backdrop-filter:blur(20px);
+        border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        overflow: auto;
+        color: var(--bkgColor);
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 5%;
+        height: fit-content;
+        margin-bottom: 5%;
+    }
+    .acora{
+        color: var(--bkgColor);
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 18px;
+        width: 92.5%;
+        border: none;
+        text-align: left;
+        outline: none;
+        border-radius: 10px;
+        border-top: var(--dourado) 1px solid;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background-color: transparent;
+        padding-left: 5%;
+        pointer-events: none;
+    }
+    .serviços{
+        color: var(--bkgColor);
+        margin-bottom: 4%;
+        position: relative;
+    }
+    .smallLogoPos{
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20%;
+        height: auto;
+        object-fit: contain;
+        background-color: var(--bkgColor);
+    }
+    .smallLogoSoli{
+        width: 160px;
+        visibility: visible;
+        position: absolute;
+        bottom: 0;
+        height: auto;
+        object-fit: contain;
+        right: 20%;
+    }
+    @media (max-width: 591px){
+        .smallLogoSoli{
+            width: 160px;
+            visibility: visible;
+            position: absolute;
+            bottom: 0;
+            height: auto;
+            object-fit: contain;
+            right: 0;
+        }
+    }
+
+    /*//////////////////////////////////////// visibility: collapse; /////////////////////////////////////////////////*/    
+
+    .linhaHorz{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+    .linhaVert{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+    .info{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+    .logoSoli{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+    .imgPos{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+    .btnCnt{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+    .img{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+    .leftCnt{
+        visibility: collapse;
+        width: 0;
+        height: 0;
+    }
+    .borda{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+}
